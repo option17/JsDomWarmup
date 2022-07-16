@@ -14,10 +14,10 @@ for (let i = 0; i <changes3.length; i++) {
      // Should have used querySelectorAll... apparently
 }
 
-let changes4 = document.getElementsByClassName(`pTags`);
+let changes4 = document.querySelectorAll(`p`);
 for (let i = 0; i < changes4.length; i++) {
-   if(changes4.includes(`link`)){
-    changes4[i][`innerHTML`] = ` <a href="google.ca">Another Link</a>` + changes4[`innerHTML`];
+   if(changes4[i][`innerHTML`].includes(`link`) === true){
+    changes4[i][`innerHTML`] += ` <a href="google.ca">Another Link</a>`;
 
     // Should have used querySelectorAll... apparently
    }
